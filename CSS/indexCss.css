@@ -1,0 +1,517 @@
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+    font-family: 'Lato', sans-serif;
+    background-color:rgb(246, 246, 246);
+    height:100%;
+}
+*{
+    box-sizing: border-box;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+a{
+    text-decoration:none;
+    color: inherit;
+    
+}
+
+/* end reset*/
+@keyframes up {
+    from {
+      opacity: 0;
+      transform: translate3d(0, 100%, 0);
+    }
+  
+    to {
+      opacity: 1;
+      transform: none;
+    }
+  }
+  @keyframes down {
+    from {
+      opacity: 0;
+      transform: translate3d(0, -100%, 0);
+    }
+  
+    to {
+      opacity: 1;
+      transform: none;
+    }
+  }
+
+  @keyframes fadeIn {
+      from {
+          opacity: 0;
+      }
+      to {
+          opacity: 1;
+      }
+  }
+
+.nav {
+    width: 95vw;
+    position: fixed;
+    font-weight: 500;
+    top: 2em;
+    margin-left: 2.5vw;
+    animation-name: down;
+    animation-duration: 1s;
+    animation-delay: 4s;
+    animation-fill-mode: both;
+    z-index: 2;
+}
+
+.nav a:nth-of-type(2){
+    float: right;
+}
+
+.nav a:nth-of-type(3){
+    float: right;
+    margin-right: 2em;
+}
+
+.Hello {
+    font-size: 15vmin;
+    width: 100%;
+    text-align: center;
+    margin-top: 25vh;
+    animation-name: up;
+    animation-duration: 1s;
+    animation-delay: 1s;
+    animation-fill-mode: both;
+    font-weight: 400;
+}
+
+.TagLine {
+    font-weight: 300;
+    margin: 1.5em auto;
+    text-align: center;
+    width: 100vmin;
+    top: 10vh;
+    animation-name: up;
+    animation-duration: 1s;
+    animation-delay: 2.5s;
+    animation-fill-mode: both;
+
+    font-size: 6vmin;
+}
+
+.about {
+    font-weight: 300;
+    margin: 1.5em auto;
+    text-align: center;
+    width: 100vmin;
+    font-weight: 700;
+    animation-name: up;
+    animation-duration: 1s;
+    animation-delay: 2.5s;
+    animation-fill-mode: both;
+    font-size: 3vmin;
+}
+
+.cps-container {
+    margin-top: 25vh;
+    width: 100vw;
+    padding-bottom: 5vh;
+}
+
+.cps {
+    margin-left: 15vw;
+    height: 30em;
+    width: 30em;
+    background-image: url("/Assets/CPSlogo.png");
+    background-size: 90%;
+    background-repeat: no-repeat;
+    z-index: -1;
+}
+
+.cps:hover .cps-overlay {
+    display: block;
+}
+
+.cps-overlay {
+    background-color: rgb(0, 51, 160);
+    height: 95%;
+    width: 95%;
+    margin: .6em auto;
+    color: white;
+    padding: 20px;
+    display: none;
+    animation-name: fadeIn;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+}
+
+.cps-overlay a {
+    height: 100%;
+    width: 100%;
+    display: block;
+}
+
+.cps-overlay h1 {
+    font-weight: 200;
+}
+
+.cps-overlay h2 {
+    font-size: 2em;
+}
+
+.cps-overlay h3 {
+    font-weight: 300;
+}
+
+.idm-container {
+    width: 100vw;
+    padding-bottom: 5vh;
+    overflow: hidden;
+}
+
+.idm {
+    float: right;
+    height: 30em;
+    width: 30em;
+    background-image: url("/assets/IDMlogo.png");
+    background-repeat: no-repeat;
+    background-size: 100%;
+    margin-right: 15vw;
+    z-index: -1;
+}
+
+.idm:hover .idm-overlay {
+    display: block;
+}
+
+.idm-overlay {
+    background-color: rgb(188, 188, 188);
+    /*R: 188 G: 188 B: 188*/
+    height: 95%;
+    width: 95%;
+    margin: .7em auto;
+    color: white;
+    padding: 20px;
+    display: none;
+    line-height: 20px;
+    animation-name: fadeIn;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+}
+
+.idm-overlay a {
+    height: 100%;
+    width: 100%;
+    display: block;
+}
+
+.idm-overlay h1 {
+    font-weight: 200;
+}
+
+.idm-overlay h2 {
+    font-size: 2em;
+}
+
+.idm-overlay h3 {
+    font-weight: 300;
+}
+
+.ccim-container {
+    width: 100vw;
+    padding-bottom: 5vh;
+}
+
+.ccim {
+    margin-left: 15vw;
+    height: 30em;
+    width: 30em;
+    background-image: url("/Assets/CCIMlogo.png");
+    background-size: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    z-index: -1;
+}
+
+.ccim:hover .ccim-overlay {
+    display: block;
+}
+
+.ccim-overlay {
+    background-color: rgb(202, 31, 65);
+    /* 	R: 202 G: 31 B: 65*/
+    height: 95%;
+    width: 95%;
+    margin: .6em auto;
+    color: white;
+    padding: 20px;
+    line-height: 20px;
+    display: none;
+    animation-name: fadeIn;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+}
+
+.ccim-overlay a {
+    height: 100%;
+    width: 100%;
+    display: block;
+}
+
+.ccim-overlay h1 {
+    font-weight: 200;
+}
+
+.ccim-overlay h2 {
+    font-size: 2em;
+}
+
+.ccim-overlay h3 {
+    font-weight: 300;
+}
+
+.fizz-container {
+    width: 100vw;
+    padding-bottom: 5vh;
+    overflow: hidden;
+}
+
+.fizz {
+    float: right;
+    margin-right: 15vw;
+    height: 25em;
+    width: 40em;
+    background-image: url("/Assets/FIZZLogo.jpg");
+    background-repeat: no-repeat;
+    background-size: 100%;
+    z-index: -1;
+}
+
+.fizz:hover .fizz-overlay {
+    display: block;
+}
+
+.fizz-overlay {
+    background-color: rgb(163, 141, 28);
+    /*163, 141, 28*/
+    height: 95%;
+    width: 95%;
+    margin: .7em auto;
+    color: white;
+    padding: 20px;
+    display: none;
+    line-height: 20px;
+    animation-name: fadeIn;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+}
+
+.fizz-overlay a {
+    height: 100%;
+    width: 100%;
+    display: block;
+}
+
+.fizz-overlay h1 {
+    font-weight: 200;
+}
+
+.fizz-overlay h2 {
+    font-size: 2em;
+}
+
+.fizz-overlay h3 {
+    font-weight: 300;
+}
+
+
+.tai-container {
+    margin-top: 30vh;
+    width: 100vw;
+    padding-bottom: 5vh;
+}
+
+.tai {
+    margin-left: 15vw;
+    height: 30em;
+    width: 30em;
+    background-image: url("/Assets/TAIlogo.png");
+    background-size: 90%;
+    background-repeat: no-repeat;
+    z-index: -1;
+}
+
+.tai:hover .tai-overlay {
+    display: block;
+}
+
+.tai-overlay {
+    background-color: rgb(214, 138, 23);
+    height: 95%;
+    width: 95%;
+    margin: .6em auto;
+    color: white;
+    padding: 20px;
+    display: none;
+    animation-name: fadeIn;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+}
+
+.tai-overlay a {
+    height: 100%;
+    width: 100%;
+    display: block;
+}
+
+.tai-overlay h1 {
+    font-weight: 200;
+}
+
+.tai-overlay h2 {
+    font-size: 2em;
+}
+
+.tai-overlay h3 {
+    font-weight: 300;
+}
+
+.emjac-container {
+    width: 100vw;
+    padding-bottom: 5vh;
+    overflow: hidden;
+}
+
+.emjac {
+    float: right;
+    height: 30em;
+    width: 30em;
+    background-image: url("/assets/IDMlogo.png");
+    background-repeat: no-repeat;
+    background-size: 100%;
+    margin-right: 15vw;
+    z-index: -1;
+}
+
+.emjac:hover .emjac-overlay {
+    display: block;
+}
+
+.emjac-overlay {
+    background-color: rgb(188, 188, 188);
+    /*R: 188 G: 188 B: 188*/
+    height: 95%;
+    width: 95%;
+    margin: .7em auto;
+    color: white;
+    padding: 20px;
+    display: none;
+    line-height: 20px;
+    animation-name: fadeIn;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+}
+
+.emjac-overlay a {
+    height: 100%;
+    width: 100%;
+    display: block;
+}
+
+.emjac-overlay h1 {
+    font-weight: 200;
+}
+
+.emjac-overlay h2 {
+    font-size: 2em;
+}
+
+.emjac-overlay h3 {
+    font-weight: 300;
+}
+
+.heinz-container {
+    width: 100vw;
+    padding-bottom: 5vh;
+}
+
+.heinz {
+    margin-left: 15vw;
+    height: 30em;
+    width: 30em;
+    background-image: url("/Assets/HEINZlogo.png");
+    background-size: 60%;
+    background-repeat: no-repeat;
+    z-index: -1;
+}
+
+.heinz:hover .heinz-overlay {
+    display: block;
+}
+
+.heinz-overlay {
+    background-color: rgb(199, 31, 19);
+    height: 95%;
+    width: 95%;
+    margin: .6em auto;
+    color: white;
+    padding: 20px;
+    display: none;
+    animation-name: fadeIn;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+}
+
+.heinz-overlay a {
+    height: 100%;
+    width: 100%;
+    display: block;
+}
+
+.heinz-overlay h1 {
+    font-weight: 200;
+}
+
+.heinz-overlay h2 {
+    font-size: 2em;
+}
+
+.heinz-overlay h3 {
+    font-weight: 300;
+}

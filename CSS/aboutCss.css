@@ -1,0 +1,314 @@
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+    font-family: 'Lato', sans-serif;
+    background-color:#F6F6F6;
+}
+*{
+    box-sizing: border-box;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+a{
+    text-decoration:none;
+    color: inherit;
+    
+}
+
+/* end reset*/
+
+@keyframes up {
+    from {
+        opacity: 0;
+        transform: translate3d(0, 100%, 0);
+    }
+    to {
+        opacity: 1;
+        transform: none;
+    }
+}
+
+@keyframes down {
+    from {
+        opacity: 0;
+        transform: translate3d(0, -100%, 0);
+    }
+    to {
+        opacity: 1;
+        transform: none;
+    }
+}
+
+.nav {
+    width: 95vw;
+    position: fixed;
+    font-weight: 500;
+    top: 2em;
+    margin-left: 2.5vw;
+    animation-name: down;
+    animation-duration: 1s;
+    animation-delay: 4s;
+    animation-fill-mode: both;
+    z-index: 2;
+}
+
+.nav a:nth-of-type(2){
+    float: right;
+}
+
+.nav a:nth-of-type(3){
+    float: right;
+    margin-right: 2em;
+}
+
+.draw-chicago {
+    margin-top: 20vh;
+}
+
+.tony {
+    font-size: 8vmin;
+    width: 100%;
+    text-align: center;
+    margin-top: 15vh;
+    font-weight: 500;
+    animation-name: up;
+    animation-duration: 1s;
+    animation-fill-mode: both;
+}
+
+.under-name {
+    font-weight: 300;
+    margin: 1em auto;
+    text-align: center;
+    width: 100vmin;
+    font-size: 5vmin;
+    animation-name: up;
+    animation-duration: 1s;
+    animation-fill-mode: both;
+}
+
+#Layer_1 {
+    stroke-dasharray: 2000;
+    animation: dash 100s linear forwards infinite;
+}
+
+@keyframes dash {
+    from {
+        stroke-dashoffset: 0;
+    }
+    to {
+        stroke-dashoffset: -25000;
+    }
+}
+
+.container {
+    margin-top: 20vh;
+    overflow: hidden;
+}
+
+.me img {
+    height: calc(1408px/2.4);
+    margin-left: 20vh;
+    float: left;
+}
+
+.about-me {
+    height: calc(1408px/2.3);
+    width: 60em;
+    overflow: auto;
+    padding-left: 2em;
+    animation-name: up;
+    animation-duration: 1s;
+    animation-fill-mode: both;
+}
+
+.about-me h1 {
+    margin-top: 1em;
+    font-size: 6vmin;
+}
+
+.about-me p {
+    font-size: 4vmin;
+    font-weight: 300;
+}
+
+.testimonial-quote {
+    font-size: 16px;
+    animation-name: up;
+    animation-duration: 1s;
+    animation-fill-mode: both;
+}
+
+.testimonial-quote blockquote {
+    /* Negate theme styles */
+    border: 0;
+    margin: 0;
+    padding: 0;
+    background: none;
+    color: #d3d3d3; /* hex */
+    font-family: Georgia, serif;
+    font-size: 1.5em;
+    font-style: italic;
+    line-height: 1.4 !important;
+    margin: 0;
+    position: relative;
+    text-shadow: 0 1px white;
+    z-index: 600;
+    
+}
+
+.rec-container {
+    width: 75vw;
+    margin: 0 auto;
+    padding-top: 80px;
+    padding-bottom: 80px;
+}
+
+.testimonial-quote {
+    font-size: 2.2vmin;
+}
+
+.testimonial-quote blockquote {
+    color: gray;
+    font-size: 1.5em;
+    font-style: italic;
+    line-height: 1.4 !important;
+    margin: 0;
+    position: relative;
+    z-index: -1;
+}
+
+.testimonial-quote blockquote p:first-child:before
+/*this was tricky. I had to include :first-childbefore because the quote would become huge otherwise.*/
+
+{
+    content: '\201C';
+    color: #c78989;
+    font-size: 7.5em;
+    font-weight: 700;
+    opacity: .3;
+    position: absolute;
+    top: -.4em;
+    left: -.2em;
+    text-shadow: none;
+    z-index: -300;
+}
+
+.testimonial-quote img {
+    border: 3px solid rgb(105, 116, 121);
+    border-radius: 50%;
+    display: block;
+    width: 120px;
+    height: 120px;
+    position: absolute;
+    top: -.2em;
+    left: 0;
+}
+
+.testimonial-quote cite {
+    color: gray;
+    display: block;
+    font-size: .8em;
+}
+
+.testimonial-quote cite span {
+    color: #5e5e5e;
+    font-size: 1em;
+    font-style: normal;
+    font-weight: 700;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    text-shadow: 0 1px white;
+}
+
+.testimonial-quote {
+    position: relative;
+}
+
+.testimonial-quote .quote-container {
+    padding-left: 160px;
+}
+
+
+/* this is to keep the image out of the rec text.*/
+
+.testimonial-quote.right .quote-container {
+    padding-left: 0;
+    padding-right: 160px;
+    animation-name: up;
+    animation-duration: 1s;
+    animation-fill-mode: both;
+}
+
+
+/* this is to keep the image out of the rec text.*/
+
+.testimonial-quote.right img {
+    left: auto;
+    right: 0;
+}
+
+.testimonial-quote.right cite {
+    text-align: right;
+}
+
+.contact {
+    font-size: 8vmin;
+    width: 100%;
+    text-align: center;
+    margin-top: 2vh;
+    font-weight: 500;
+    animation-name: up;
+    animation-duration: 1s;
+    animation-fill-mode: both;
+}
+
+.contact-text {
+    font-weight: 300;
+    margin: 1em auto;
+    text-align: center;
+    width: 100vmin;
+    animation-delay: 2.5s;
+    font-size: 5vmin;
+    animation-name: up;
+    animation-duration: 1s;
+    animation-fill-mode: both;
+}
